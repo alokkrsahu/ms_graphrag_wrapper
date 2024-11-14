@@ -10,7 +10,7 @@ log = logging.getLogger(__name__)
 
 class CustomLLM(BaseLLM[List[Dict[str, str]], str]):
     """Custom LLM implementation using TGI"""
-    def __init__(self, tgi_url: str = "http://192.168.2.222:8000"):
+    def __init__(self, tgi_url: str = "http://<ip-address>:<port>"):
         super().__init__()
         self.tgi_url = tgi_url
         self._on_error = None
